@@ -35,10 +35,14 @@ h1, h2, h3, h4 {
   text-decoration: none;
   margin-left: 30px;
   font-weight: bold;
+    transition: color 0.2s;
+
 }
 
 .navbar nav a:hover {
   text-decoration: underline;
+    color: #ffe789;
+
 }
 
 /* --- HERO --- */
@@ -123,21 +127,118 @@ h1, h2, h3, h4 {
 
 
 
+/*SKILLS*/
+
+
+#skills {
+  text-align: center;
+  margin: 40px auto;
+    font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #0f172a;
+    padding: 60px 20px; /* Espacio superior e inferior para separar de otras secciones */
+
+}
+
+.skills h2 {
+  margin-bottom: 120px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centra los elementos horizontalmente */
+  gap: 12px;
+  margin-top:50px;
+}
+
+.skill-button {
+  display: flex;
+  align-items: center;
+  background-color: #444;
+  color: white;
+  border-radius: 30px;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.skill-button img {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.skill-button:hover {
+  background-color: #222;
+  cursor: default;
+}
+
+/*EXPERIENCE*/
+
+#experience {
+  padding: 60px 300px;
+  background-color: #1e293b;
+  color: #0f172a;
+  text-align: left;
+}
+
+#experience h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: #f1f5f9;
+}
+
+.experience-item {
+  margin-bottom: 40px;
+}
+
+.experience-item h3 {
+  font-size: 20px;
+  color: #222;
+  margin-bottom: 5px;
+    color: #f1f5f9;
+
+}
+
+.date-range {
+  font-size: 14px;
+  color: #aaaaaa;
+}
+.experience-item p {
+  color: #dddddd;
+  line-height: 1.8;
+  font-size: 1.2rem;
+}
+
+
+
 /* --- PROJECTS --- */
+
 .projects {
-  padding: 100px 120px;
-  padding-left: 300px;
-  padding-right: 300px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 40px;
 }
 
 .projects h3 {
   font-size: 1.6rem;
-  margin-bottom: 60px;
+  margin-bottom: 10px;
+    color: #1e2937;
+    text-align: center;
+
   
 }
 
 .project-card {
   margin-bottom: 60px;
+  padding: 60px 0;
+
+
 }
 
 .project-card h4 {
@@ -147,9 +248,11 @@ h1, h2, h3, h4 {
 }
 
 .project-grid {
-  display: flex;
+ display: grid;
+  grid-template-columns: auto 1fr;  /* Imagen a la izquierda, texto al lado */
+  align-items: start;
   gap: 40px;
-  align-items: center;
+  padding: 32px 0;
 }
 
 .project-image {
@@ -158,23 +261,23 @@ h1, h2, h3, h4 {
 }
 
 .project-image img {
-  width: 100%;
+  width: 180px;
   height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 .project-info {
-  flex: 1;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  text-align: left;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
 }
 
 .project-info p {
-  margin: 0;
+text-align: left;
   font-size: 1.2rem;
   line-height: 1.6;
+  color: #333;
 }
 
 .arrow {
@@ -233,7 +336,6 @@ h1, h2, h3, h4 {
 
 .social-icons img[alt="LinkedIn"] {
   scale: 1.3; /* Agranda solo el de LinkedIn */
-  url(https://chatgpt.com/g/g-p-684d626bbd048191a90481997019ef14-mari-dev/project)
 }
 
 .social-icons img:hover {
@@ -241,7 +343,7 @@ h1, h2, h3, h4 {
 }
 
 
-
+/* --- SCROLL MARGIN PARA NAVBAR FIJA --- */
 
 
 html {
@@ -249,7 +351,8 @@ html {
 }
 
 
-/*RESIZE movil*/
+
+/*--- RESPONSIVE ---*/
 
 @media (max-width: 768px) {
   .navbar {
@@ -281,42 +384,102 @@ html {
   text-align: center;
 }
 
-
-  .about {
-    flex-direction:column-reverse;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 80px;
-
+/*RESPONSIVE ABOUT*/
+/* --- RESPONSIVE --- */
+@media (max-width: 1100px) {
+  .about, #experience, .projects {
+    padding-left: 20px;
+    padding-right: 20px;
   }
-
-.about-image {
-    margin-bottom: 20px;
-    align-content: center;
-    
-}  
-
-  .about-text {
-    text-align:justify;
-  }
-    
-  .projects {
-     padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 80px;
-    text-align: center;
-  }
-
-  .project-card {
-    text-align: center; 
-  }
-  .project-grid {
-    flex-direction: column;
-  }
-  .project-image {
-  margin-bottom: 20px;
 }
 
-.project-info p {
-  text-align:justify;
+@media (max-width: 900px) {
+  .about, #experience, .projects {
+    padding: 60px 12px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 20px;
+  }
+  .navbar .logo span {
+    font-size: 1rem;
+  }
+  .navbar nav a {
+    margin-left: 15px;
+  }
+  .hero {
+    padding-top: 120px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .hero img {
+    border-radius: 10px 10px 0 0;
+    max-width: 95%;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero h2 {
+    font-size: 1.2rem;
+  }
+  .about {
+    flex-direction: column-reverse;
+    gap: 40px;
+    padding: 60px 10px;
+    align-items: center;
+    text-align: center;
+  }
+  .about-text {
+    text-align: justify;
+  }
+  .about-image {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  #skills {
+    padding: 40px 10px;
+  }
+  .skills-grid {
+    gap: 10px;
+  }
+  #experience {
+    padding: 40px 10px;
+  }
+  #experience h2 {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+  .experience-item h3 {
+    font-size: 18px;
+  }
+  .experience-item p {
+    font-size: 15px;
+  }
+  .date-range {
+    font-size: 13px;
+  }
+  .projects {
+    padding: 40px 10px;
+    text-align: center;
+  }
+  .project-card {
+    padding: 20px 0;
+    text-align: center;
+  }
+  .project-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+  }
+  .project-image {
+    margin-bottom: 20px;
+  }
+  .project-info p {
+    text-align: justify;
+  }
 }
