@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Carrusel Test</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 40px;
+    }
+
+    .carrusel-container {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin: auto;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      background: white;
+    }
+
+    .carrusel-track {
+      display: flex;
+      transition: transform 0.4s ease-in-out;
+    }
+
+    .slide {
+      min-width: 100%;
+      box-sizing: border-box;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .carrusel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #1e293b;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      font-size: 20px;
+      z-index: 2;
+    }
+
+    #prev {
+      left: 10px;
+    }
+
+    #next {
+      right: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="carrusel-container">
+    <button id="prev" class="carrusel-btn">◀</button>
+
+    <div class="carrusel-track">
+      <div class="slide" style="background-color: #ffdede">Proyecto 1</div>
+      <div class="slide" style="background-color: #def7ff">Proyecto 2</div>
+      <div class="slide" style="background-color: #e5ffde">Proyecto 3</div>
+    </div>
+
+    <button id="next" class="carrusel-btn">▶</button>
+  </div>
+
+  <script>
+    const track = document.querySelector(".carrusel-track");
+    const slides = document.querySelectorAll(".slide");
+    const prevBtn = document.getElementById("prev");
+    const nextBtn = document.getElementById("next");
+
+    let index = 0;
+
+    function moveToSlide(i) {
+      const width = slides[0].offsetWidth;
+      track.style.transform = `translateX(-${width * i}px)`;
+    }
+
+    nextBtn.addEventListener("click", () => {
+      if (index < slides.length - 1) {
+        index++;
+        moveToSlide(index);
+      }
+    });
+
+    prevBtn.addEventListener("click", () => {
+      if (index > 0) {
+        index--;
+        moveToSlide(index);
+      }
+    });
+
+    window.addEventListener("resize", () => moveToSlide(index));
+  </script>
+
+</body>
+</html>
