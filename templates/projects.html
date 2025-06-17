@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="projects.css">
+
+    
+<title>PM services</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+
+<body>
+
+  {% include 'navbar.html' %}
+
+
+  <div class="container" id="container">
+
+
+    <!-- PROJECTS -->
+  <section class="projects" id="projects">
+    <h3>PROJECTS</h3>
+    
+    <div class="project-card">
+  <div class="project-grid">
+    <div class="project-image">
+      <img src="{{ url_for('static', filename='fundraisin.png') }}" alt="Fund Raisin Project">
+    </div>
+
+    <div class="project-info">
+      <h4>FUND RAISIN</h4>
+      <p>
+        The Fund Raisin platform enables artists and sponsors to join forces, gather supporters, and transfer energy -money- to a beneficiary.
+        <br>
+        As the Project Manager, I led the development of the Fund Raisin Creator Tools I coordinated the entire workflow between the design, development, and marketing teams, ensuring timely delivery and smooth feature rollouts.
+        <br><br>
+        For more information, visit <a href="https://www.fundraisin.app" target="_blank">www.fundraisin.app</a>.
+      </p>
+    <a href="{{ url_for('projects') }}">See more</a>
+    </div>
+  </div>
+</div>
+  </section>
+
+
+      <!-- FOOTER -->
+
+{% include 'footer.html' %}
+
+</html>

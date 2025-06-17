@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='contact.css') }}">
+
+    
+<title>PM services</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+
+<body>
+
+ {% include 'navbar.html' %}
+
+
+  <div class="container" id="container">
+
+  <!-- Formulary -->
+  <section class="contact" id="contact">
+
+<h1>Contact Me</h1>
+<form action="mailto:your.marifreelance001@gmail.com" method="POST" enctype="text/plain">
+  <!-- 🧑‍💼 Basic Information -->
+  <fieldset>
+    <legend>Basic Information</legend>
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="Full Name" required><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="Email" required><br><br>
+
+    <label for="work-type">Are you representing a company or working as a freelancer?</label>
+    <select id="work-type" name="Client Type" required>
+
+      <option value="">--Select one--</option>
+      <option value="Company">Company</option>
+      <option value="Freelancer">Freelancer</option>
+      <option value="Startup">Startup</option>
+      <option value="NGO">NGO</option>
+      <option value="Other">Other</option>
+    </select>
+    <br><br>
+  </fieldset>
+
+  <!-- 💬 About the Project -->
+<fieldset>
+  <legend>About the Project</legend>
+  
+  <label for="project-summary">Briefly describe your project:</label>
+  <textarea id="project-summary" name="Project Summary" rows="3" required></textarea>
+
+  <label style="margin-top:20px;">What do you need from me?</label>
+
+  <label class="checkbox-label">
+
+    <input type="checkbox" id="pm" name="Services Needed" value="Project Management (PM)">
+    Project Management (PM)
+  </label>
+
+  <label class="checkbox-label">
+    <input type="checkbox" id="uxui" name="Services Needed" value="UX/UI (design or research)">
+    UX/UI (design or research)
+  </label>
+
+  <label class="checkbox-label">
+    <input type="checkbox" id="creative" name="Services Needed" value="Creative/Audiovisual Direction">
+    Creative/Audiovisual Direction
+  </label>
+
+  <label class="checkbox-label">
+    <input type="checkbox" id="consulting" name="Services Needed" value="Process Consulting">
+    Process Consulting
+  </label>
+
+  <label class="checkbox-label">
+    <input type="checkbox" id="other-service" name="Services Needed" value="Something else">
+    Something else (please specify below)
+  </label>
+
+  <input type="text" id="other-service-desc" name="Other Service" placeholder="Other (please specify)">
+</fieldset>
+
+
+<!-- 🧠 Project Requirements -->
+<fieldset>
+  <legend>Project Requirements</legend>
+
+  <label class="checkbox-label">
+    <input type="checkbox" id="remote" name="Project Requirements" value="Remote work">
+    Remote work
+  </label>
+
+  <label class="checkbox-label">
+    <input type="checkbox" id="weekly" name="Project Requirements" value="Weekly meetings">
+    Weekly meetings
+  </label>
+  
+  <label class="checkbox-label">
+    <input type="checkbox" id="fixed-budget" name="Project Requirements" value="Fixed budget">
+    Fixed budget
+  </label>
+
+  <label class="checkbox-label">
+    <input type="checkbox" id="hourly" name="Project Requirements" value="Hourly work">
+    Hourly work
+  </label>
+
+  <label class="checkbox-label">
+    <input type="checkbox" id="english" name="Project Requirements" value="Fluent English">
+    Fluent English
+  </label>
+  <label class="checkbox-label">
+
+      <label class="checkbox-label">
+    <input type="checkbox" id="spanish" name="Project Requirements" value="Fluent Spanish">
+    Fluent Spanish
+  </label>
+
+  <label class="checkbox-label">
+    <input type="checkbox" id="web3" name="Project Requirements" value="Familiar with Web3/Blockchain">
+    Familiar with Web3/Blockchain
+  </label>
+
+  <label class="checkbox-label">
+    <input type="checkbox" id="nda" name="Project Requirements" value="Signed NDA">
+    Signed NDA
+  </label>
+
+  <label class="checkbox-label">
+    <input type="checkbox" id="urgent" name="Project Requirements" value="Urgent (<1 week)">
+    Urgent (&lt;1 week)
+  </label>
+
+  <label class="checkbox-label">
+    <input type="checkbox" id="flexible" name="Project Requirements" value="Flexible (>1 month)">
+    Flexible (&gt;1 month)
+  </label>
+</fieldset>
+
+<!-- 🛠 Skills You're Looking For -->
+
+<fieldset>
+  <legend>Skills You Are Looking For</legend>
+
+  <label class="checkbox-label">
+    <input type="checkbox" id="notion" name="Skills" value="Notion / Trello / Odoo management">
+    Notion / Trello / Odoo management
+  </label>
+
+  <label class="checkbox-label">
+    <input type="checkbox" id="agile" name="Skills" value="Agile methodologies (Scrum, Kanban)">
+    Agile methodologies (Scrum, Kanban)
+  </label>
+
+  <label class="checkbox-label">
+    <input type="checkbox" id="uxresearch" name="Skills" value="UX research / interviews">
+    UX research / interviews
+  </label>
+
+  <label class="checkbox-label">
+    <input type="checkbox" id="wireframing" name="Skills" value="Wireframing and prototyping">
+    Wireframing and prototyping
+  </label>
+
+  <label class="checkbox-label">
+    <input type="checkbox" id="teamlead" name="Skills" value="Remote team leadership">
+    Remote team leadership
+  </label>
+
+  <label class="checkbox-label">
+    <input type="checkbox" id="testing" name="Skills" value="QA Testing">
+    QA Testing
+  </label>
+
+  <label class="checkbox-label">
+    <input type="checkbox" id="engc2" name="Skills" value="English C2 / Native Spanish">
+    English C2 / Native Spanish
+  </label>
+
+</fieldset>
+
+<!-- 📎 Attach document or brief (optional) -->
+
+<fieldset>
+  <legend>Attach document or brief (optional)</legend>
+  <input type="file" id="attachment" name="Attachment">
+</fieldset>
+
+<br>
+<button type="submit">Send request →</button>
+</section>
+      <!-- FOOTER -->
+
+
+{% include 'footer.html' %}
+
+</html>

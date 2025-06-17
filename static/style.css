@@ -98,7 +98,7 @@ h1, h2, h3, h4 {
   gap: 60px;
   box-shadow: 0 0 20px #0f172a;
 
-}
+}1e293b
 
 .about-text {
   flex: 2;
@@ -124,7 +124,17 @@ h1, h2, h3, h4 {
   margin: o;
   display: block;
 }
+.about-text a {
+  color: white;
+  text-decoration: none;
+  margin-left: 0;
+  font-weight: bold;
+    transition: color 0.2s;
+  }
 
+.about-text a:hover {
+  text-decoration: underline;
+    color: #ffe789;}
 
 
 /*SKILLS*/
@@ -137,6 +147,7 @@ h1, h2, h3, h4 {
   margin-bottom: 20px;
   color: #0f172a;
     padding: 60px 20px; /* Espacio superior e inferior para separar de otras secciones */
+    
 
 }
 
@@ -184,6 +195,8 @@ h1, h2, h3, h4 {
   background-color: #1e293b;
   color: #0f172a;
   text-align: left;
+      box-shadow: 0 0 20px #0f172a;
+
 }
 
 #experience h2 {
@@ -280,6 +293,17 @@ text-align: left;
   color: #333;
 }
 
+.project-info a {
+  color: #1f2937;
+  text-decoration: none;
+  margin-left: 0;
+  font-weight: bold;
+    transition: color 0.2s;
+  }
+
+.project-info a:hover {
+  text-decoration: underline;
+    color: #ffe789;}
 .arrow {
   font-size: 1.5rem;
   font-weight: bold;
@@ -399,7 +423,7 @@ html {
     max-width: 100%;
   }
 }
-
+}
 @media (max-width: 768px) {
   .navbar {
     padding: 20px;

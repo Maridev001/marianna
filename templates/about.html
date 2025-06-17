@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+<title>PM services</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}">
+
+</head>
+
+
+<body>
+
+  {% include 'navbar.html' %}
+
+
+  <div class="container" id="container">
+
+<!-- ABOUT AGREGAR MAS SOBRE MI, BIOGRAFIA COMPLETA -->
+
+ <!-- ABOUT -->
+  <section class="about" id="about">
+    
+    <div class="about-text">
+      <h3>ABOUT ME</h3>
+      <p>Hi, I'm Marianna — a Project Manager with experience leading digital product teams from concept to launch. I specialize in bridging communication between design, development, and stakeholders to deliver meaningful results.
+<br><br>
+I’ve worked with international startups across the U.S. and Europe, coordinating multidisciplinary teams and building efficient workflows. My focus is on clarity, structure, and human-centered outcomes.</p>
+   
+</div>
+    
+    <div class="about-image">
+  <img src="{{ url_for('static', filename='marianna.jpeg') }}" alt="Marianna Alvarez">
+</div>
+
+
+
+    </div>
+  </section>
+
+      <!-- FOOTER -->
+
+{% include 'footer.html' %}
+
+</html>
