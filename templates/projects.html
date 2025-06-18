@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="projects.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='projects.css') }}">
 
     
 <title>PM services</title>
@@ -30,7 +30,7 @@
     </div>
 
     <div class="project-info">
-      <h4>FUND RAISIN</h4>
+      <h4>FUND RAISIN - Project Manager</h4>
       <p>
         The Fund Raisin platform enables artists and sponsors to join forces, gather supporters, and transfer energy -money- to a beneficiary.
         <br>
@@ -38,7 +38,6 @@
         <br><br>
         For more information, visit <a href="https://www.fundraisin.app" target="_blank">www.fundraisin.app</a>.
       </p>
-    <a href="{{ url_for('projects') }}">See more</a>
     </div>
   </div>
 </div>

@@ -19,38 +19,46 @@
 
   <!-- HERO -->
   <section class="hero">
-    <h1>MARIANNA ALVAREZ</h1>
-    <h2>Project Manager</h2>
+    <h1>Marianna Alvarez</h1>
+    <h2>Project Manager & Digital Consultant</h2>
+    <h3>"I help digital teams turn ideas into real products”</h3>
+    <br>
     <img src="{{ url_for('static', filename='mockup.png') }}" alt="Mockup gráfico">
   </section>
 
   <!-- ABOUT -->
   <section class="about" id="about">
     
+    
     <div class="about-text">
-      <h3>ABOUT ME</h3>
+      <h2>About me</h2>
       <p>Hi, I'm Marianna — a Project Manager with experience leading digital product teams from concept to launch. I specialize in bridging communication between design, development, and stakeholders to deliver meaningful results.
 <br><br>
-I’ve worked with international startups across the U.S. and Europe, coordinating multidisciplinary teams and building efficient workflows. My focus is on clarity, structure, and human-centered outcomes.</p>
-    <a id="more" href="{{ url_for('about') }}">See more</a>
+<ul>
+<li>+4 years working in UX, QA testing and managing software products</li>
+<li>Agile, people-first approach, results-driven</li>
+<li>Proven success in remote</li>
+</ul>    
+</p>
+    <a class="see-more-btn" id="more-button" href="{{ url_for('about') }}">See more</a>
+    </div>
+     
 
-</div>
-    
     <div class="about-image">
   <img src="{{ url_for('static', filename='marianna.jpeg') }}" alt="Marianna Alvarez">
 </div>
 
-
-
     </div>
   </section>
 
+
+  
   <!-- SKILLS -->
 
 
 <section id="skills" class="section">
   <div class="container">
-    <h2>🛠️ Skills</h2>
+    <h3>Skills</h3>
     <div class="skills-grid">
       <div class="skill-button">
         <img src="https://cdn.simpleicons.org/trello/ffffff" alt="Trello">
@@ -80,68 +88,83 @@ I’ve worked with international startups across the U.S. and Europe, coordinati
         <span>QA Testing</span>
       </div>
       <div class="skill-button">
-        <span>Soft Skills</span>
+        <span>Digital consulting</span>
       </div>
     </div>
   </div>
 </section>
 
-  <!-- EXPERIENCE -->
+<!--CERTIFICATIONS-->
 
+<section class="certifications-block">
+  <h2>Certifications & Badges</h2>
+  <div class="certifications-list">
+    <div class="cert-card">
+        <img src="{{ url_for('static', filename='capm-badge.png') }}" alt="PMI badge">
+
+      <span>PMI Project Management</span>
+    </div>
+    <div class="cert-card">
+        <img src="{{ url_for('static', filename='google-badge.png') }}" alt="GOOGLE badge">
+      <span>Coursera PM Professional</span>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
 <section id="experience" class="section">
   <div class="container">
-    <h2>💼 Professional Experience</h2>
+    <h2>Professional Experience</h2>
 
     <div class="experience-item">
       <h3>Project Manager – red·dev INC</h3>
       <p class="date-range">2023 – Present</p>
-      <p>
-        I lead digital projects for international startups (US and Europe), coordinating cross-functional teams in development, design, and marketing. I specialize in building efficient workflows and delivering user-centered products using tools like Trello, Asana, Odoo, and Agile methodologies.
-      </p>
+      <ul>
+        <li>Lead digital projects for international startups (US & Europe).</li>
+        <li>Coordinated cross-functional teams in development, design, and marketing.</li>
+        <li>Specialized in building efficient workflows and user-centered products.</li>
+      </ul>
     </div>
 
     <div class="experience-item">
       <h3>UX Designer – red·dev INC</h3>
       <p class="date-range">2020 – 2022</p>
-      <p>
-        Designed user experiences for web and mobile digital products. Participated in research, information architecture, Adobe XD prototyping, and user testing. This experience strengthened my user-first approach as a project manager.
-      </p>
+      <ul>
+        <li>Designed user experiences for web and mobile digital products.</li>
+        <li>Participated in research, information architecture, and user testing.</li>
+        <li>Prototyped in <b>Adobe XD</b>.</li>
+      </ul>
     </div>
 
     <div class="experience-item">
       <h3>Architecture Thesis Project</h3>
       <p class="date-range">2019</p>
-      <p>
-        Developed a public space revitalization project with a strong social focus. My background in architecture brings structured thinking, spatial sensitivity, and the ability to address complex problems through planning and design.
-      </p>
+      <ul>
+        <li>Developed a public space revitalization project with a strong social focus.</li>
+        <li>Applied structured thinking and spatial sensitivity from architecture.</li>
+        <li>Addressed complex problems through planning and design.</li>
+      </ul>
     </div>
+    <a class="see-more-btn" id="more-button" href="{{ url_for('projects') }}">See Projects</a>
+
+    
   </div>
 </section>
 
 
-
-  <!-- PROJECTS -->
-  <section class="projects" id="projects">
-    <h3>PROJECTS</h3>
-    
-    <div class="project-card">
-  <div class="project-grid">
-    <div class="project-image">
-      <img src="{{ url_for('static', filename='fundraisin.png') }}" alt="Fund Raisin Project">
+<!--TESTIMONIALS-->
+  <section class="testimonials-block">
+  <h2>What People Say</h2>
+  <div class="testimonials-list">
+    <div class="testimonial-card">
+      <p>“Marianna is the best PM I've worked with – super organized, clear and motivating!”</p>
+      <span class="testimonial-author">– Zach R.</span>
     </div>
-
-    <div class="project-info">
-      <h4>FUND RAISIN</h4>
-      <p>
-        The Fund Raisin platform enables artists and sponsors to join forces, gather supporters, and transfer energy -money- to a beneficiary.
-        <br>
-        For more information, visit <a href="https://www.fundraisin.app" target="_blank">www.fundraisin.app</a>.
-      </p>
-    <a href="{{ url_for('projects') }}">See more</a>
-    </div>
+    <!-- Puedes agregar más testimonials aquí si algún día tienes más -->
+     
   </div>
-</div>
-  </section>
+</section>
+
 
   </div> <!-- Fin del .container -->
 

@@ -1,19 +1,31 @@
 
 .contact h1 {
-  font-size: 3.2rem;
-  font-weight: 400;
+  font-size: 1.8rem;
+  font-weight: bold;
   margin-bottom: 10px;
   color: #1f2937;
-  padding-bottom: 10px;
+  padding-bottom: 0;
   padding-top: 50px;
   text-align: center;
 }
 
+.flash-message {
+  background: #dbeafe;
+  color: #075985;
+  padding: 18px 26px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-align: center;
+}
 
-
+.required {
+  color: #d32f2f;
+  font-weight: bold;
+}
 /*REST OF THE SITE */
 body {
-  background: #f4f7fb;
+  background-color: #f1f5f9!important;
 }
 
 form {
@@ -168,3 +180,4 @@ fieldset + fieldset {
 ::-moz-placeholder { color: #b1b7be; }
 :-ms-input-placeholder { color: #b1b7be; }
 ::placeholder { color: #b1b7be; }
+

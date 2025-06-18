@@ -17,13 +17,25 @@
  {% include 'navbar.html' %}
 
 
+ {% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <div class="flash-message">
+      {% for message in messages %}
+        <p>{{ message }}</p>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endwith %} 
+  <!-- Formulary -->
+
   <div class="container" id="container">
 
-  <!-- Formulary -->
   <section class="contact" id="contact">
 
 <h1>Contact Me</h1>
-<form action="mailto:your.mariprofessional@outlook.com" method="POST" enctype="text/plain">
+
+<form action="https://formspree.io/f/mqablyqd" method="POST">
+
   <!-- 🧑‍💼 Basic Information -->
   <fieldset>
     <legend>Basic Information</legend>
@@ -53,6 +65,8 @@
   <label for="project-summary">Briefly describe your project:</label>
   <textarea id="project-summary" name="Project Summary" rows="3" required></textarea>
 
+
+  <!-- FOR THE FUTURE
   <label style="margin-top:20px;">What do you need from me?</label>
 
   <label class="checkbox-label">
@@ -85,7 +99,6 @@
 </fieldset>
 
 
-<!-- 🧠 Project Requirements -->
 <fieldset>
   <legend>Project Requirements</legend>
 
@@ -141,7 +154,7 @@
   </label>
 </fieldset>
 
-<!-- 🛠 Skills You're Looking For -->
+
 
 <fieldset>
   <legend>Skills You Are Looking For</legend>
@@ -181,7 +194,7 @@
     English C2 / Native Spanish
   </label>
 
-</fieldset>
+</fieldset> -->
 
 <!-- 📎 Attach document or brief (optional) -->
 

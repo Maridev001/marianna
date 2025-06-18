@@ -4,25 +4,30 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 100px 120px;
-  padding-right: 300px;
-  padding-left: 300px;
-  padding-bottom: 200px;
-  padding-top: 200px;
+  padding: 100px 300px 100px 300px;
   background-color: #f1f5f9;
   color: #1e293b;
   gap: 60px;
-  box-shadow: none!important;
 }
-
+.about-container {
+  display: flex;
+  align-items: flex-start;   /* Alinea arriba para que inicien juntos */
+  gap: 56px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 50px 0 0 0;
+}
 .about-text {
   flex: 2;
+  text-align: justify;
 }
 
 .about-text h3 {
   font-size: 1.5rem;
   margin-bottom: 20px;
   color: #1e293b;
+  text-align: center;
+  padding-top: 50px;
 }
 
 .about-text p {
@@ -30,15 +35,23 @@
   font-size: 1.2rem;
 }
 
-.about-image img {
-  width: 250px;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+.about-image2 img {
+  width: 230px;
+  height: 300px;
   object-fit: cover;
-  margin: 0;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px 0 rgba(20,115,230,0.08);
   display: block;
 }
+
+.about-image2 {
+  flex: 1;
+  min-width: 230px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
 .about-text a {
   color: #1e293b;
   text-decoration: none;
@@ -47,9 +60,26 @@
     transition: color 0.2s;
   }
 
-.about-text a:hover {
-  text-decoration: underline;
-    color: #ffe789;}
+
+
+.about-quote {
+  margin: 34px auto 0 auto;
+  padding: 24px 36px;
+  max-width: 700px;
+  background: #f6faff;
+  color: #24304a;
+  border-left: 4px solid #1e293b;
+  border-radius: 12px;
+  font-size: 1.12rem;
+  font-style: italic;
+  box-shadow: 0 2px 12px 0 rgba(20,115,230,0.08);
+  text-align: left;
+}
+.about-quote em {
+  font-style: italic;
+  color: #1e293b;
+}
+
 
 
 
